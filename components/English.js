@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import colors from '../assets/colors/colors';
 
+// setting up routes for https://english.factcrescendo.com/
+
 const English = ({navigation}) => {
   const [posts, setPosts] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
@@ -21,6 +23,8 @@ const English = ({navigation}) => {
   const wait = timeout => {
     return new Promise(resolve => setTimeout(resolve, timeout));
   };
+
+  // for some reason, i can't get this to work
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
